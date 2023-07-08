@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 class="heading">RC-19-20 CGPA Calculator</h1>
+
+    <h2>Enter Deets</h2>
+    <!-- form -->
+    <form id="student-form" class="form">
+        <label for="semester">Enter Semester</label>
+        <input type="text" name="semester" id="semester" required>
+        <label for="prev">Enter previous CGPA</label>
+        <input type="text" name="prev" id="prev" required>
+        <label for="current">Enter current SGPA</label>
+        <input type="text" name="current" id="current" required>
+        <button name="submitter" class="submit btn" type="submit">Calculate</button>
+        <button class="btn" type="reset">reset</button>
+    </form>
+
+    <h2 class="display">Calculated CGPA</h2>
+    <h3 class="display-cgpa">~</h3>
+    <p class="prop"></p>
+    <!-- script tags -->
+    <script src="./index.js"></script>
+</body>
+</html>

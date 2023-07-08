@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --blue-1: #1e3a8a;
+  --blue-2: #1d4ed8;
+  --blue-3: #3b82f6;
+  --rad-green: #a2ff86;
+  --white: #fff;
+  --dark-1: #111;
+
+  --font-size: 16px;
+  --font-family: "Poppins", "Arial", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(13, 0, 44), #1e1b4b);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: var(--blue-3);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--rad-green);
+  margin: 1rem 0;
+}
+
+/* user form ------------------ */
+.form {
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: var(--font-size);
+  text-transform: capitalize;
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0000006b;
+  backdrop-filter: blur(10px) opacity(0.2);
+  /* margin: 0 auto; */
+}
+
+.form input {
+  border: 2px solid var(--blue-1);
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px 1rem;
+  font-size: 1.2rem;
+  background: transparent;
+  color: var(--white);
+}
+
+.form label {
+  margin-top: 1rem;
+}
+
+/* button */
+
+button.btn {
+  padding: 5px 1.2rem;
+  background: rgb(0, 75, 0);
+  color: var(--rad-green);
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font: 15px var(--font-family);
+  margin: 0.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button.btn:focus {
+  background: transparent;
+}
+
+button.btn:hover {
+  background: rgb(0, 47, 0);
+}
+
+/* display -------- */
+
+h2.display {
+  margin-top: 3rem;
+}
+
+h3.display-cgpa {
+  color: var(--blue-2);
+  font-size: 3rem;
+  margin: 0;
+}
+
+p.prop {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* media queries -------------------------------- */
+
+@media screen and (max-width: 768px) {
+  .form {
+    flex-basis: 80%;
+    padding: 1rem;
+  }
+}
