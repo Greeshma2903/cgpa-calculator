@@ -18,23 +18,24 @@
 }
 
 body {
-  background: linear-gradient(45deg, rgb(13, 0, 44), #1e1b4b);
+  background: linear-gradient(45deg, rgb(13, 0, 44), #161249);
   font-family: var(--font-family);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--white);
-
+  padding: 2rem 0;
+  margin-bottom: 2rem;
   min-height: 100vh;
   height: 100%;
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 h1 {
   color: var(--blue-3);
-  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -44,18 +45,20 @@ h2 {
 }
 
 /* user form ------------------ */
-.form {
+.form, .display-box {
   padding: 2rem;
   border-radius: 10px;
   font-size: var(--font-size);
-  text-transform: capitalize;
+  background: #0000006b;
+  backdrop-filter: blur(10px) opacity(0.2);
+}
+
+.form {
   flex-basis: 60%;
+  text-transform: capitalize;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #0000006b;
-  backdrop-filter: blur(10px) opacity(0.2);
-  /* margin: 0 auto; */
 }
 
 .form input {
@@ -110,6 +113,18 @@ h3.display-cgpa {
 p.prop {
     font-style: italic;
     font-size: 14px;
+}
+
+/* footer -------- */
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer p {
+  font-size: 12px;
 }
 
 /* media queries -------------------------------- */
