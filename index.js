@@ -42,9 +42,9 @@ const calcCGPA = (e) => {
   let [sem, prevCGPA, sgpa] = [...formData].map((item) => Number(item[1]));
 
   if (
-    typeof sem === "number" &&
-    typeof prevCGPA === "number" &&
-    typeof sgpa === "number"
+      !isNaN(sem) &&
+      !isNaN(prevCGPA) &&
+      !isNaN(sgpa)
   ) {
     // credits of individual semesters (RC 2019-20)
     const credits = [16, 18, 23, 24, 22, 22, 17, 18];
