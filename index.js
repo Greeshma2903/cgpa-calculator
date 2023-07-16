@@ -42,30 +42,40 @@ const calcCGPA = (e) => {
   let [sem, prevCGPA, sgpa] = [...formData].map((item) => Number(item[1]));
 
   if (
-    typeof sem === "number" &&
-    typeof prevCGPA === "number" &&
-    typeof sgpa === "number"
+      !isNaN(sem) &&
+      !isNaN(prevCGPA) &&
+      !isNaN(sgpa)
   ) {
-    // credits of individual semesters (RC 2019-20)
-    const credits = [16, 18, 23, 24, 22, 22, 17, 18];
-
-    let totalCredits = 0;
-    for (let i = 0; i < sem - 1; i++) {
-      totalCredits += credits[i];
-    }
-
-    const num = prevCGPA * totalCredits + credits[sem - 1] * sgpa;
-    totalCredits += credits[sem - 1];
-
-    //   display final cgpa
-    const finalCGPA = (num / totalCredits).toFixed(2);
-    displayCGPA.innerHTML = finalCGPA;
-
-    //   display paragraph
-    punch.forEach((item) => {
-      if (finalCGPA >= item.down && finalCGPA < item.up) punchLine = item.line;
-    });
-    document.querySelector(".prop").innerHTML = punchLine;
+      if ( sem>0 && sem <=8 && Number.isInteger(sem) &&
+	   prevCGPA>=0 && prevCGPA <=10 &&
+	   sgpa>=0 && sgpa <=10
+      ) {
+	  // credits of individual semesters (RC 2019-20)
+	  const credits = [16, 18, 23, 24, 22, 22, 17, 18];
+	  
+	  let totalCredits = 0;
+	  for (let i = 0; i < sem - 1; i++) {
+	      totalCredits += credits[i];
+	  }
+	  
+	  const num = prevCGPA * totalCredits + credits[sem - 1] * sgpa;
+	  totalCredits += credits[sem - 1];
+	  
+	  //   display final cgpa
+	  const finalCGPA = (num / totalCredits).toFixed(2);
+	  displayCGPA.innerHTML = finalCGPA;
+	  
+	  //   display paragraph
+	  punch.forEach((item) => {
+	      if (finalCGPA >= item.down && finalCGPA < item.up) punchLine = item.line;
+	  });
+	  document.querySelector(".prop").innerHTML = punchLine;
+      } else {
+	  displayCGPA.innerHTML = "Aise pass karoge exams? XD";
+	  document.querySelector(".prop").innerHTML =
+	      "🖋️ please enter valid values above 🖋️";
+	  return;
+      }
   } else {
     displayCGPA.innerHTML = "Aise pass karoge exams? XD";
     document.querySelector(".prop").innerHTML =
