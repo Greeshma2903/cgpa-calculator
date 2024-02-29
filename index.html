@@ -20,24 +20,38 @@
     <h2>Enter Deets</h2>
     <!-- form -->
     <form id="student-form" class="form">
-        <label for="semester">Enter Semester</label>
-        <input type="text" name="semester" id="semester" required>
-        <label for="prev">Enter previous CGPA</label>
-        <input type="text" name="prev" id="prev" required>
-        <label for="current">Enter current SGPA</label>
-        <input type="text" name="current" id="current" required>
+        <div class="input-container">
+
+            <label for="semester">Enter Semester</label>
+            <input type="text" name="semester" id="semester" required>
+            <p class="helper-text">Enter the <strong>Sem</strong> for which you're calculating.</p>
+        </div>
+        <div class="input-container">
+
+            <label for="prev">Enter previous CGPA</label>
+            <input type="text" name="prev" id="prev" required>
+            <p class="helper-text">Enter the calculated CGPA till <strong>(Sem -1)</strong>.</p>
+        </div>
+        <div class="input-container">
+
+            <label for="current">Enter current SGPA</label>
+            <input type="text" name="current" id="current" required>
+            <p class="helper-text">Enter SGPA associated to the <strong>Sem</strong>.</p>
+        </div>
         <button name="submitter" class="submit btn" type="submit">Calculate</button>
-        <button class="btn" type="reset">reset</button>
+        <button class="btn reset-btn" type="reset">reset</button>
     </form>
 
-    <h2 class="display">Calculated CGPA</h2>
+    <h2 class="display" id="cgpa-value">Calculated CGPA</h2>
     <div class="display-box">
         <h3 class="display-cgpa">~</h3>
         <p class="prop"></p>
     </div>
 
     <footer>
-        <p>made with 🙌 and 💻 for <a href="https://www.gec.ac.in/Default.aspx">GEC</a> folks</p>
+        <p>made with ❤️ for <a href="https://www.gec.ac.in/Default.aspx">GEC</a> folks ~ contribute on <a
+                href="https://github.com/greeshma2903/cgpa-calculator">GitHub</a> ✨</p>
+        <p>Ref: GU Ordinance OA-16</p>
     </footer>
     <!-- script tags -->
     <script src="./index.js"></script>

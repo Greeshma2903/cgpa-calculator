@@ -15,6 +15,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--white);
-  padding: 2rem 0;
+  padding: 2rem 0 3rem;
   margin-bottom: 2rem;
   min-height: 100vh;
   height: 100%;
@@ -45,7 +46,8 @@ h2 {
 }
 
 /* user form ------------------ */
-.form, .display-box {
+.form,
+.display-box {
   padding: 2rem;
   border-radius: 10px;
   font-size: var(--font-size);
@@ -61,6 +63,13 @@ h2 {
   align-items: center;
 }
 
+.form .input-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .form input {
   border: 2px solid var(--blue-1);
   border-radius: 5px;
@@ -69,10 +78,18 @@ h2 {
   font-size: 1.2rem;
   background: transparent;
   color: var(--white);
+  width: 100%;
 }
 
 .form label {
   margin-top: 1rem;
+}
+
+.form .helper-text {
+  font-size: 12px;
+  color: var(--rad-green);
+  margin: 0.5rem 0;
+  text-transform: none;
 }
 
 /* button */
@@ -111,8 +128,8 @@ h3.display-cgpa {
 }
 
 p.prop {
-    font-style: italic;
-    font-size: 14px;
+  font-style: italic;
+  font-size: 14px;
 }
 
 /* footer -------- */
