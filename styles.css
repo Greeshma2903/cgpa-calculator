@@ -5,6 +5,7 @@
   --blue-2: #1d4ed8;
   --blue-3: #3b82f6;
   --rad-green: #a2ff86;
+  --subtle-rad: #aae997;
   --white: #fff;
   --dark-1: #111;
 
@@ -87,7 +88,7 @@ h2 {
 
 .form .helper-text {
   font-size: 12px;
-  color: var(--rad-green);
+  color: var(--subtle-rad);
   margin: 0.5rem 0;
   text-transform: none;
 }
@@ -142,6 +143,10 @@ footer {
 
 footer p {
   font-size: 12px;
+}
+
+footer a {
+  color: var(--blue-3);
 }
 
 /* media queries -------------------------------- */
